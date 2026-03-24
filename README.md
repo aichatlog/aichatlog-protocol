@@ -1,4 +1,8 @@
-# ConversationObject Protocol v1
+# ConversationObject Protocol
+
+[![CI](https://github.com/aichatlog/aichatlog-protocol/actions/workflows/validate.yml/badge.svg)](https://github.com/aichatlog/aichatlog-protocol/actions/workflows/validate.yml)
+[![Release](https://img.shields.io/github/v/tag/aichatlog/aichatlog-protocol?label=release)](https://github.com/aichatlog/aichatlog-protocol/releases)
+[![License: AGPL-3.0](https://img.shields.io/badge/license-AGPL--3.0-blue.svg)](LICENSE)
 
 English | [简体中文](README.zh-CN.md)
 
@@ -73,3 +77,12 @@ To build an input plugin for a new AI tool:
 4. The server handles dedup, storage, FTS indexing, and output
 
 The `source` field should be a lowercase identifier for your tool (e.g. `gemini`, `copilot`, `cursor`).
+
+## Version Compatibility
+
+| Protocol | Server         | CC Plugin      | Notes |
+|----------|----------------|----------------|-------|
+| 0.5.0    | >= 0.1.0       | >= 0.1.0       | v1 full payload only |
+| 0.6.0    | >= 0.6.0       | >= 0.8.0       | v2 conditional sync (check/delta/full) |
+
+**Versioning note:** The `version` field inside ConversationObject (integer 1 or 2) is the *wire protocol version*. The [VERSION](VERSION) file tracks the *schema/spec release version* (semver). These are distinct — a single release version (e.g. 0.6.0) can support multiple wire versions (v1 and v2).
