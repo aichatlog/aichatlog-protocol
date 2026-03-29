@@ -2,7 +2,8 @@
 .md-content{font-size:14px;line-height:1.7}
 .md-content h1,.md-content h2,.md-content h3{font-size:1em;font-weight:600;margin:0.5em 0 0.25em}
 .md-content p{margin:0.3em 0}
-.md-content ul,.md-content ol{margin:0.3em 0;padding-left:1.5em}
+.md-content ul{margin:0.3em 0;padding-left:1.5em;list-style:disc}
+.md-content ol{margin:0.3em 0;padding-left:1.5em;list-style:decimal}
 .md-content li{margin:0.1em 0}
 .md-content table{border-collapse:collapse;margin:0.5em 0;font-size:13px;width:100%}
 .md-content th,.md-content td{border:1px solid #d1d5db;padding:4px 10px;text-align:left}
