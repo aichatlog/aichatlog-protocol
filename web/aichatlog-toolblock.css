@@ -1,0 +1,9 @@
+/* AIChatLog Tool Block — collapsible tool call rendering */
+.tool-block{border:1px solid #e5e7eb;border-radius:6px;margin:6px 0}
+.dark .tool-block{border-color:#374151}
+.tool-block summary{padding:6px 10px;cursor:pointer;list-style:none;font-size:13px}
+.tool-block summary::-webkit-details-marker{display:none}
+.tool-block .tool-params{opacity:0.6;font-size:12px}
+.tool-block[open]>summary{border-bottom:1px solid #e5e7eb}
+.dark .tool-block[open]>summary{border-bottom-color:#374151}
+.tool-block>:not(summary){padding:4px 10px;max-height:300px;overflow-y:auto}

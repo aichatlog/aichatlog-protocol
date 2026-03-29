@@ -1,0 +1,39 @@
+/* AIChatLog Syntax — code highlighting (One Light + Catppuccin Mocha) */
+
+/* Light mode (One Light) */
+.md-content pre{background:#f8f8f8;color:#383a42}
+.hljs-keyword,.hljs-built_in,.hljs-type{color:#a626a4}
+.hljs-string,.hljs-regexp{color:#50a14f}
+.hljs-number,.hljs-literal{color:#986801}
+.hljs-comment,.hljs-quote{color:#a0a1a7;font-style:italic}
+.hljs-function .hljs-title,.hljs-title.function_{color:#4078f2}
+.hljs-variable,.hljs-attr,.hljs-property{color:#e45649}
+.hljs-class .hljs-title,.hljs-title.class_{color:#c18401}
+.hljs-tag{color:#4078f2}
+.hljs-name{color:#a626a4}
+.hljs-attribute{color:#986801}
+.hljs-selector-class,.hljs-selector-id{color:#50a14f}
+.hljs-params{color:#383a42}
+.hljs-meta,.hljs-meta .hljs-keyword{color:#e45649}
+.hljs-symbol,.hljs-bullet{color:#c18401}
+.hljs-addition{color:#50a14f;background:rgba(80,161,79,0.1)}
+.hljs-deletion{color:#e45649;background:rgba(228,86,73,0.1)}
+
+/* Dark mode (Catppuccin Mocha) */
+.dark .md-content pre{background:#1e1e2e;color:#cdd6f4}
+.dark .hljs-keyword,.dark .hljs-built_in,.dark .hljs-type{color:#cba6f7}
+.dark .hljs-string,.dark .hljs-regexp{color:#a6e3a1}
+.dark .hljs-number,.dark .hljs-literal{color:#fab387}
+.dark .hljs-comment,.dark .hljs-quote{color:#7f849c}
+.dark .hljs-function .hljs-title,.dark .hljs-title.function_{color:#89b4fa}
+.dark .hljs-variable,.dark .hljs-attr,.dark .hljs-property{color:#89dceb}
+.dark .hljs-class .hljs-title,.dark .hljs-title.class_{color:#f9e2af}
+.dark .hljs-tag{color:#89b4fa}
+.dark .hljs-name{color:#cba6f7}
+.dark .hljs-attribute{color:#fab387}
+.dark .hljs-selector-class,.dark .hljs-selector-id{color:#a6e3a1}
+.dark .hljs-params{color:#f2cdcd}
+.dark .hljs-meta,.dark .hljs-meta .hljs-keyword{color:#f38ba8}
+.dark .hljs-symbol,.dark .hljs-bullet{color:#f9e2af}
+.dark .hljs-addition{color:#a6e3a1;background:rgba(166,227,161,0.1)}
+.dark .hljs-deletion{color:#f38ba8;background:rgba(243,139,168,0.1)}

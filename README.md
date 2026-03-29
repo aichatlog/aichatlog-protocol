@@ -78,11 +78,34 @@ To build an input plugin for a new AI tool:
 
 The `source` field should be a lowercase identifier for your tool (e.g. `gemini`, `copilot`, `cursor`).
 
+## Shared UI Components
+
+The `web/` directory contains shared UI components for rendering conversations. Any dashboard can use them via CDN:
+
+```html
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/aichatlog/aichatlog-protocol@v0.7.0/web/aichatlog-content.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/aichatlog/aichatlog-protocol@v0.7.0/web/aichatlog-syntax.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/aichatlog/aichatlog-protocol@v0.7.0/web/aichatlog-toolblock.css">
+<script src="https://cdn.jsdelivr.net/gh/aichatlog/aichatlog-protocol@v0.7.0/web/aichatlog-theme.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/aichatlog/aichatlog-protocol@v0.7.0/web/aichatlog-markdown.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/aichatlog/aichatlog-protocol@v0.7.0/web/aichatlog-message.js"></script>
+```
+
+| Component | Description |
+| --------- | ----------- |
+| `aichatlog-content.css` | Markdown typography (`.md-content`) |
+| `aichatlog-syntax.css` | Code highlighting — One Light (light) / Catppuccin Mocha (dark) |
+| `aichatlog-toolblock.css` | Collapsible tool call blocks (`.tool-block`) |
+| `aichatlog-theme.js` | Light/dark/auto theme switching |
+| `aichatlog-markdown.js` | Markdown rendering engine (markdown-it + DOMPurify + tool-block support) |
+| `aichatlog-message.js` | `<aichatlog-message>` Web Component for rendering individual messages |
+
 ## Version Compatibility
 
-| Protocol | Server         | CC Plugin      | Notes |
-|----------|----------------|----------------|-------|
-| 0.5.0    | >= 0.1.0       | >= 0.1.0       | v1 full payload only |
-| 0.6.0    | >= 0.6.0       | >= 0.8.0       | v2 conditional sync (check/delta/full) |
+| Protocol | Server   | CC Plugin | Notes                                  |
+|----------|----------|-----------|----------------------------------------|
+| 0.5.0    | >= 0.1.0 | >= 0.1.0  | v1 full payload only                   |
+| 0.6.0    | >= 0.6.0 | >= 0.8.0  | v2 conditional sync (check/delta/full) |
+| 0.7.0    | >= 0.7.0 | >= 0.9.0  | Shared UI components (`web/`)          |
 
 **Versioning note:** The `version` field inside ConversationObject (integer 1 or 2) is the *wire protocol version*. The [VERSION](VERSION) file tracks the *schema/spec release version* (semver). These are distinct — a single release version (e.g. 0.6.0) can support multiple wire versions (v1 and v2).
