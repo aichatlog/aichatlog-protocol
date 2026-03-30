@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://github.com/aichatlog/aichatlog/protocol/conversation.schema.json",
+  "$id": "https://github.com/aichatlog/aichatlog-protocol/conversation.schema.json",
   "title": "ConversationObject",
   "description": "AIChatLog conversation transport protocol. v1 sends full payload; v2 adds conditional sync (check/delta/full modes).",
   "type": "object",

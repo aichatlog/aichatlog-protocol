@@ -61,9 +61,10 @@
         ? 'rounded-2xl rounded-br-sm px-4 py-3 bg-blue-500 text-white text-sm leading-relaxed'
         : 'rounded-2xl rounded-bl-sm px-4 py-3 bg-gray-100 dark:bg-slate-800 text-gray-900 dark:text-slate-200 text-sm leading-relaxed border border-gray-200 dark:border-slate-700/50';
 
-      if (isUser) {
+      if (isUser && !content.includes('```') && !content.includes('**') && !content.includes('# ')) {
         bubble.textContent = content;
       } else {
+        bubble.classList.add('md-content');
         window.AIChatLog.renderContent(bubble, content, getMd());
       }
       this.appendChild(bubble);
